@@ -11,7 +11,7 @@ export const generateNewNote = () => {
 
 export const getNotes = count => {
   let notes = {};
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < count; i++) {
     const id = shortid.generate();
     const newNote = generateNewNote();
     const noteId = newNote.note_id;
