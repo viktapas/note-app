@@ -6,9 +6,13 @@ import { setActiveNoteId } from '../../store/actions';
 import './Note.css';
 
 const Note = ({ note }) => {
-  const { title, text, lastUpdate } = note;
+  const { note_id, title, text, lastUpdate } = note;
+  const activeNoteId = store.getState().activeNoteId;
   return (
-    <div className="Note" onClick={handleNoteClick.bind(null, note)}>
+    <div
+      className={note_id === activeNoteId ? 'Note Note__active' : 'Note'}
+      onClick={handleNoteClick.bind(null, note)}
+    >
       <div className="Title">{title}</div>
       <div className="Text">{text}</div>
       <div className="Timestamp">

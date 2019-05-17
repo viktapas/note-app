@@ -7,3 +7,9 @@
   cursor: default;
   background-color: rgb(224, 224, 224);
 }
+.Note__active {
+  background-color: yellow;
+}
+.Note__active:hover {
+  background-color: yellow;
+}
