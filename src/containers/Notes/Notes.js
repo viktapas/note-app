@@ -1,6 +1,6 @@
 import React from 'react';
-import Note from '../../components/Note/Note';
-import { store } from '../../store';
+import Note from '../Note/Note';
+import store from '../../store';
 
 import './Notes.css';
 
@@ -12,13 +12,7 @@ const Notes = () => {
   return (
     <div className="Notes">
       {notesArr.map(note => (
-        <Note
-          key={note.id}
-          id={note.id}
-          title={note.title}
-          text={note.text}
-          lastUpdate={note.lastUpdate}
-        />
+        <Note key={note.note_id} note={note} />
       ))}
       ;
     </div>

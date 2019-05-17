@@ -1,9 +1,14 @@
 import React from 'react';
 import moment from 'moment';
+import store from '../../store';
+import { setActiveNoteId } from '../../store/actions';
 
-const Note = ({ id, title, text, lastUpdate }) => {
+import './Note.css';
+
+const Note = ({ note }) => {
+  const { title, text, lastUpdate } = note;
   return (
-    <div className="Note">
+    <div className="Note" onClick={handleNoteClick.bind(null, note)}>
       <div className="Title">{title}</div>
       <div className="Text">{text}</div>
       <div className="Timestamp">
@@ -14,5 +19,9 @@ const Note = ({ id, title, text, lastUpdate }) => {
     </div>
   );
 };
+
+function handleNoteClick({ note_id }) {
+  store.dispatch(setActiveNoteId(note_id));
+}
 
 export default Note;

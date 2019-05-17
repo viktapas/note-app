@@ -1,0 +1,9 @@
+.Note {
+  padding: 5px;
+  margin: 2px;
+  background-color: rgb(236, 236, 236);
+}
+.Note:hover {
+  cursor: default;
+  background-color: rgb(224, 224, 224);
+}

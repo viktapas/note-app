@@ -2,7 +2,7 @@ var shortid = require('shortid');
 
 const generateNote = (id, currentCount) => {
   return {
-    id: id,
+    note_id: id,
     title: 'Note-' + currentCount,
     text: 'This is note-' + currentCount + '.',
     lastUpdate: new Date()
