@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import store from '../../store';
 import { generateNewNote } from '../../store/static-data';
-import { createNewNote, deleteNote } from '../../store/actions';
+import {
+  createNewNote,
+  deleteNote,
+  setActiveNoteId
+} from '../../store/actions';
 
 import './Toolbar.css';
 
@@ -18,7 +22,11 @@ class Toolbar extends Component {
 
   handleDeleteNote = () => {
     const activeNoteId = store.getState().activeNoteId;
-    store.dispatch(deleteNote(activeNoteId));
+    if (activeNoteId) {
+      store.dispatch(deleteNote(activeNoteId));
+      const nextActiveNoteId = Object.keys(store.getState().notes)[0];
+      store.dispatch(setActiveNoteId(nextActiveNoteId));
+    }
   };
   handleCreateNote = () => {
     const newNote = generateNewNote();
