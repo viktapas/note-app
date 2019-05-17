@@ -24,7 +24,7 @@ class Toolbar extends Component {
     const activeNoteId = store.getState().activeNoteId;
     if (activeNoteId) {
       store.dispatch(deleteNote(activeNoteId));
-      const nextActiveNoteId = Object.keys(store.getState().notes)[0];
+      const nextActiveNoteId = Object.keys(store.getState().notes).pop();
       store.dispatch(setActiveNoteId(nextActiveNoteId));
     }
   };

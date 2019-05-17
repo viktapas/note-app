@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import store from '../../store';
 import { updateNote } from '../../store/actions';
 
@@ -9,10 +10,13 @@ class Editor extends Component {
     return (
       <div className="Editor">
         {this.props.note ? (
-          <input
-            value={this.props.note.text}
-            onChange={this.handleChangeEvent}
-          />
+          <div>
+            <p>{moment(this.props.note.timestamp).format()}</p>
+            <input
+              value={this.props.note.text}
+              onChange={this.handleChangeEvent}
+            />
+          </div>
         ) : (
           <h2>Select a note</h2>
         )}

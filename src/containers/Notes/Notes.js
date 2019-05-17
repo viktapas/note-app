@@ -11,7 +11,6 @@ const Notes = ({ notes }) => {
       {notesArr.map(note => (
         <Note key={note.note_id} note={note} />
       ))}
-      ;
     </div>
   );
 };
