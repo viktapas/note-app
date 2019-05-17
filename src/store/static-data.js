@@ -1,10 +1,10 @@
-var shortid = require('shortid');
+import shortid from 'shortid';
 
-const generateNote = (id, currentCount) => {
+export const generateNewNote = () => {
   return {
-    note_id: id,
-    title: 'Note-' + currentCount,
-    text: 'This is note-' + currentCount + '.',
+    note_id: shortid.generate(),
+    title: 'New Note',
+    text: 'This is new note body',
     lastUpdate: new Date()
   };
 };
@@ -12,8 +12,10 @@ const generateNote = (id, currentCount) => {
 export const getNotes = count => {
   let notes = {};
   for (let i = 0; i < 10; i++) {
-    let id = shortid.generate();
-    notes[id] = generateNote(id, i + 1);
+    const id = shortid.generate();
+    const newNote = generateNewNote();
+    const noteId = newNote.note_id;
+    notes[noteId] = newNote;
   }
   return notes;
 };

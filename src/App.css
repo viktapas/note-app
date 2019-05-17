@@ -3,6 +3,9 @@
   margin: auto;
   margin-top: 20px;
   border: 4px solid #333;
+}
+
+.App .Grid {
   display: grid;
   grid-template-columns: 40% 60%;
 }

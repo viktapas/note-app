@@ -1,6 +1,8 @@
 import React from 'react';
 import Notes from './containers/Notes/Notes';
 import Editor from './containers/Editor/Editor';
+import Toolbar from './containers/Toolbar/Toolbar';
+
 import store from './store';
 
 import './App.css';
@@ -10,9 +12,11 @@ function App() {
   const activeNote = state.notes[state.activeNoteId];
   return (
     <div className="App">
-      {/* <Header /> */}
-      <Notes notes={state.notes} />
-      <Editor note={activeNote} />
+      <Toolbar />
+      <div className="Grid">
+        <Notes notes={state.notes} />
+        <Editor note={activeNote} />
+      </div>
     </div>
   );
 }
