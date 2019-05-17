@@ -3,15 +3,18 @@ import moment from 'moment';
 import store from '../../store';
 import { updateNote } from '../../store/actions';
 
-import './Editor.css';
+import * as styles from './Editor.module.css';
 
 class Editor extends Component {
   render() {
     return (
-      <div className="Editor">
+      <div className={styles.Editor}>
         {this.props.note ? (
           <div>
-            <p>{moment(this.props.note.timestamp).format()}</p>
+            <p className={styles.Timestamp}>
+              {moment(this.props.note.timestamp).format('LL')} at{' '}
+              {moment(this.props.note.timestamp).format('LTS')}
+            </p>
             <input
               value={this.props.note.text}
               onChange={this.handleChangeEvent}

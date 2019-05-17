@@ -3,3 +3,7 @@ textarea {
   height: 50%;
   background-color: palegoldenrod;
 }
+.Timestamp {
+  opacity: 0.5;
+  text-align: center;
+}
