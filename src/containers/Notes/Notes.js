@@ -1,13 +1,11 @@
 import React from 'react';
 import Note from '../Note/Note';
-import store from '../../store';
 
 import './Notes.css';
 
-const Notes = () => {
-  const state = store.getState();
+const Notes = ({ notes }) => {
   let notesArr = [];
-  Object.keys(state.notes).map(id => notesArr.push(state.notes[id]));
+  Object.keys(notes).map(id => notesArr.push(notes[id]));
   console.log(notesArr);
   return (
     <div className="Notes">
