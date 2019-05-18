@@ -1,5 +1,5 @@
-import { getNotes } from '../static-data';
-import { UPDATE_NOTE, NEW_NOTE, DELETE_NOTE } from '../action-types';
+import { getNotes } from "../static-data";
+import { UPDATE_NOTE, NEW_NOTE, DELETE_NOTE } from "../action-types";
 
 export const notes = (state = getNotes(20), action) => {
   switch (action.type) {

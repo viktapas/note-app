@@ -1,5 +1,5 @@
-export const SET_ACTIVE_NOTE_ID = 'SET_ACTIVE_NOTE_ID';
-export const UPDATE_NOTE = 'UPDATE_NOTE';
-export const NEW_NOTE = 'NEW_NOTE';
-export const DELETE_NOTE = 'DELETE_NOTE';
-export const TOGGLE_NOTES_DRAWER = 'TOGGLE_NOTES_DRAWER';
+export const SET_ACTIVE_NOTE_ID = "SET_ACTIVE_NOTE_ID";
+export const UPDATE_NOTE = "UPDATE_NOTE";
+export const NEW_NOTE = "NEW_NOTE";
+export const DELETE_NOTE = "DELETE_NOTE";
+export const TOGGLE_NOTES_DRAWER = "TOGGLE_NOTES_DRAWER";

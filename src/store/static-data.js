@@ -1,10 +1,10 @@
-import shortid from 'shortid';
-import faker from 'faker';
+import shortid from "shortid";
+import faker from "faker";
 
 export const generateNewNote = () => {
   return {
     note_id: shortid.generate(),
-    title: 'New Note',
+    title: "New Note",
     text: faker.lorem.paragraph(),
     lastUpdate: faker.date.recent()
   };

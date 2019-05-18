@@ -4,7 +4,7 @@ import {
   NEW_NOTE,
   DELETE_NOTE,
   TOGGLE_NOTES_DRAWER
-} from '../action-types';
+} from "../action-types";
 
 export const setActiveNoteId = id => ({
   type: SET_ACTIVE_NOTE_ID,

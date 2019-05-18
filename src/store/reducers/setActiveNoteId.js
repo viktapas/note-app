@@ -1,4 +1,4 @@
-import { SET_ACTIVE_NOTE_ID, NEW_NOTE, DELETE_NOTE } from '../action-types';
+import { SET_ACTIVE_NOTE_ID, NEW_NOTE, DELETE_NOTE } from "../action-types";
 
 export const setActiveNoteId = (state = null, action) => {
   switch (action.type) {

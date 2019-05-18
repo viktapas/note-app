@@ -1,4 +1,4 @@
-import { TOGGLE_NOTES_DRAWER } from '../action-types';
+import { TOGGLE_NOTES_DRAWER } from "../action-types";
 
 export const toggleNotesDrawer = (state = true, action) => {
   switch (action.type) {

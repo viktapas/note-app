@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Notes from './containers/Notes/Notes';
-import Editor from './containers/Editor/Editor';
-import Toolbar from './containers/Toolbar/Toolbar';
-import { toggleNotesDrawer } from './store/actions';
-import store from './store';
+import React, { Component } from "react";
+import Notes from "./containers/Notes/Notes";
+import Editor from "./containers/Editor/Editor";
+import Toolbar from "./containers/Toolbar/Toolbar";
+import { toggleNotesDrawer } from "./store/actions";
+import store from "./store";
 
-import * as styles from './App.module.css';
+import * as styles from "./App.module.css";
 
 const App = () => {
   const state = store.getState();

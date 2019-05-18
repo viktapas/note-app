@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import store from '../../store';
-import { generateNewNote } from '../../store/static-data';
+import React, { Component } from "react";
+import store from "../../store";
+import { generateNewNote } from "../../store/static-data";
 import {
   createNewNote,
   deleteNote,
   setActiveNoteId
-} from '../../store/actions';
+} from "../../store/actions";
 
-import * as styles from './Toolbar.module.css';
+import * as styles from "./Toolbar.module.css";
 
 class Toolbar extends Component {
   render() {
