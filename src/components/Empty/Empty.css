@@ -1,0 +1,14 @@
+.Empty {
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.Empty h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  display: inline-block;
+  margin-top: 15rem;
+  color: #ffc400;
+}

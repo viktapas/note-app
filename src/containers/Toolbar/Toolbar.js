@@ -7,15 +7,21 @@ import {
   setActiveNoteId
 } from '../../store/actions';
 
-import './Toolbar.css';
+import * as styles from './Toolbar.module.css';
 
 class Toolbar extends Component {
   render() {
     return (
-      <div className="Toolbar">
-        <p>Toolbar</p>
-        <button onClick={this.handleDeleteNote}>Delete</button>
-        <button onClick={this.handleCreateNote}>+New</button>
+      <div className={styles.Toolbar}>
+        <button className={styles.Button} onClick={this.props.toggleSideBar}>
+          =
+        </button>
+        <button className={styles.Button} onClick={this.handleDeleteNote}>
+          Delete
+        </button>
+        <button className={styles.Button} onClick={this.handleCreateNote}>
+          New
+        </button>
       </div>
     );
   }

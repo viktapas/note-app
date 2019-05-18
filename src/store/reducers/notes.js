@@ -1,14 +1,15 @@
 import { getNotes } from '../static-data';
 import { UPDATE_NOTE, NEW_NOTE, DELETE_NOTE } from '../action-types';
 
-export const notes = (state = getNotes(2), action) => {
+export const notes = (state = getNotes(20), action) => {
   switch (action.type) {
     case UPDATE_NOTE:
       return {
         ...state,
         [action.payload.id]: {
           ...state[action.payload.id],
-          text: action.payload.text
+          text: action.payload.text,
+          lastUpdate: action.payload.lastUpdate
         }
       };
     case NEW_NOTE:

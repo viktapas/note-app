@@ -1,9 +1,22 @@
 textarea {
+  flex: 1;
   width: 100%;
-  height: 50%;
-  background-color: palegoldenrod;
+  background-color: white;
+  padding: 2rem 3rem;
+  resize: none;
+  outline: none;
+  border: 0;
 }
 .Timestamp {
+  margin-top: 1.5rem;
   opacity: 0.5;
   text-align: center;
+}
+.Flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.Editor {
+  flex: 1;
 }

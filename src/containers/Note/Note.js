@@ -8,19 +8,24 @@ import './Note.css';
 const Note = ({ note }) => {
   const { note_id, title, text, lastUpdate } = note;
   const activeNoteId = store.getState().activeNoteId;
+
+  const fomattedTime =
+    moment(new Date()).format('L') === moment(lastUpdate).format('L')
+      ? moment(lastUpdate).format('LT')
+      : moment(lastUpdate).format('dddd');
   return (
-    <div
+    <button
       className={note_id === activeNoteId ? 'Note Note__active' : 'Note'}
       onClick={handleNoteClick.bind(null, note)}
     >
-      <div className="Title">{title}</div>
       <div className="Text">{text}</div>
-      <div className="Timestamp">
-        {moment(lastUpdate).format('MMM DD, YYYY') +
-          ' at ' +
-          moment(lastUpdate).format('LT')}
+      <div className="Info">
+        <span className="Timestamp">{fomattedTime}</span>
+        <span className="Title">
+          This is a very logn paragramp. ellipse it to nail it down.
+        </span>
       </div>
-    </div>
+    </button>
   );
 };
 

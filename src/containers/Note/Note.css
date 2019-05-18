@@ -1,15 +1,44 @@
 .Note {
-  padding: 5px;
-  margin: 2px;
-  background-color: rgb(236, 236, 236);
+  padding: 1rem 1.5rem;
+  text-align: unset;
+  outline: none;
+  background: white;
+  border: 0;
+}
+.Note:focus {
+  background-color: #f6e3a2;
+}
+.Note:not(:last-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .Note:hover {
   cursor: default;
-  background-color: rgb(224, 224, 224);
 }
 .Note__active {
-  background-color: yellow;
+  background-color: #f9efc5;
 }
-.Note__active:hover {
-  background-color: yellow;
+
+.Timestamp {
+  margin-right: 1rem;
+  opacity: 0.5;
+}
+.Title {
+  opacity: 0.75;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.Text {
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.Info {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

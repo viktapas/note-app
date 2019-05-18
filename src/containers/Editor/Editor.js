@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import store from '../../store';
 import { updateNote } from '../../store/actions';
+import Empty from '../../components/Empty/Empty';
 
 import * as styles from './Editor.module.css';
 
@@ -10,18 +11,19 @@ class Editor extends Component {
     return (
       <div className={styles.Editor}>
         {this.props.note ? (
-          <div>
+          <div className={styles.Flex}>
             <p className={styles.Timestamp}>
-              {moment(this.props.note.timestamp).format('LL')} at{' '}
-              {moment(this.props.note.timestamp).format('LTS')}
+              {this.props.note.lastUpdate.toDateString()}
+              <span> at </span>
+              {moment(this.props.note.lastUpdate).format('LT')}
             </p>
-            <input
+            <textarea
               value={this.props.note.text}
               onChange={this.handleChangeEvent}
             />
           </div>
         ) : (
-          <h2>Select a note</h2>
+          <Empty />
         )}
       </div>
     );
@@ -29,7 +31,8 @@ class Editor extends Component {
 
   handleChangeEvent = e => {
     const text = e.target.value;
-    store.dispatch(updateNote(this.props.note.note_id, text));
+    const lastUpdate = new Date();
+    store.dispatch(updateNote(this.props.note.note_id, text, lastUpdate));
   };
 }
 

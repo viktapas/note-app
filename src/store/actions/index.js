@@ -2,7 +2,8 @@ import {
   SET_ACTIVE_NOTE_ID,
   UPDATE_NOTE,
   NEW_NOTE,
-  DELETE_NOTE
+  DELETE_NOTE,
+  TOGGLE_NOTES_DRAWER
 } from '../action-types';
 
 export const setActiveNoteId = id => ({
@@ -10,9 +11,9 @@ export const setActiveNoteId = id => ({
   payload: { id: id }
 });
 
-export const updateNote = (id, text) => ({
+export const updateNote = (id, text, lastUpdate) => ({
   type: UPDATE_NOTE,
-  payload: { id: id, text: text }
+  payload: { id: id, text: text, lastUpdate: lastUpdate }
 });
 
 export const createNewNote = note => ({
@@ -23,4 +24,8 @@ export const createNewNote = note => ({
 export const deleteNote = id => ({
   type: DELETE_NOTE,
   payload: { id: id }
+});
+
+export const toggleNotesDrawer = () => ({
+  type: TOGGLE_NOTES_DRAWER
 });
