@@ -1,7 +1,12 @@
 {
-  "name": "note-app",
+  "name": "Note app for automate.io",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Vikas Kumar (@dzenvikas)",
+    "email": "vikaskumar.vsk@gmail.com",
+    "url": "https://github.com/dzenvikas"
+  },
   "dependencies": {
     "faker": "^4.1.0",
     "moment": "^2.24.0",

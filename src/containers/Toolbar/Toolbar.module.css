@@ -29,6 +29,10 @@
   margin-right: 3rem;
 }
 
+input.Button {
+  margin-left: auto;
+}
+
 @media (max-width: 460px) {
   .Toolbar {
     z-index: 2;

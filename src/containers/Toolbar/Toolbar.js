@@ -22,6 +22,11 @@ class Toolbar extends Component {
         <button className={styles.Button} onClick={this.handleCreateNote}>
           New
         </button>
+        <input
+          className={styles.Button}
+          type="search"
+          placeholder="Search notes..."
+        />
       </div>
     );
   }
