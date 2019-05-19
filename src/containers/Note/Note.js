@@ -18,12 +18,10 @@ const Note = ({ note }) => {
       className={note_id === activeNoteId ? "Note Note__active" : "Note"}
       onClick={handleNoteClick.bind(null, note)}
     >
-      <div className="Text">{text}</div>
+      <div className="Title">{title}</div>
       <div className="Info">
         <span className="Timestamp">{fomattedTime}</span>
-        <span className="Title">
-          This is a very logn paragramp. ellipse it to nail it down.
-        </span>
+        <span className="Text">{text}</span>
       </div>
     </button>
   );

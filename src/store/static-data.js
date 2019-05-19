@@ -6,7 +6,7 @@ export const generateNewNote = () => {
     note_id: shortid.generate(),
     title: "New Note",
     text: faker.lorem.paragraph(),
-    lastUpdate: faker.date.recent()
+    lastUpdate: faker.date.recent().toJSON()
   };
 };
 

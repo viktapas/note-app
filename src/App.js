@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Notes from "./containers/Notes/Notes";
 import Editor from "./containers/Editor/Editor";
 import Toolbar from "./containers/Toolbar/Toolbar";

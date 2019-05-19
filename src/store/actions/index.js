@@ -8,22 +8,22 @@ import {
 
 export const setActiveNoteId = id => ({
   type: SET_ACTIVE_NOTE_ID,
-  payload: { id: id }
+  payload: { id }
 });
 
-export const updateNote = (id, text, lastUpdate) => ({
+export const updateNote = (id, title, lastUpdate) => ({
   type: UPDATE_NOTE,
-  payload: { id: id, text: text, lastUpdate: lastUpdate }
+  payload: { id, title, lastUpdate }
 });
 
 export const createNewNote = note => ({
   type: NEW_NOTE,
-  payload: { note: note }
+  payload: { note }
 });
 
 export const deleteNote = id => ({
   type: DELETE_NOTE,
-  payload: { id: id }
+  payload: { id }
 });
 
 export const toggleNotesDrawer = () => ({

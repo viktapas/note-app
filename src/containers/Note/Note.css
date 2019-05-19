@@ -22,14 +22,14 @@
   margin-right: 1rem;
   opacity: 0.5;
 }
-.Title {
+.Text {
   opacity: 0.75;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.Text {
+.Title {
   font-weight: 600;
   white-space: nowrap;
   text-overflow: ellipsis;

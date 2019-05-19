@@ -13,12 +13,12 @@ class Editor extends Component {
         {this.props.note ? (
           <div className={styles.Flex}>
             <p className={styles.Timestamp}>
-              {this.props.note.lastUpdate.toDateString()}
+              {moment(this.props.note.lastUpdate).format("LL")}
               <span> at </span>
               {moment(this.props.note.lastUpdate).format("LT")}
             </p>
             <textarea
-              value={this.props.note.text}
+              value={this.props.note.title}
               onChange={this.handleChangeEvent}
             />
           </div>
@@ -30,9 +30,9 @@ class Editor extends Component {
   }
 
   handleChangeEvent = e => {
-    const text = e.target.value;
+    const title = e.target.value;
     const lastUpdate = new Date();
-    store.dispatch(updateNote(this.props.note.note_id, text, lastUpdate));
+    store.dispatch(updateNote(this.props.note.note_id, title, lastUpdate));
   };
 }
 
