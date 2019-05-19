@@ -13,10 +13,10 @@ function saveDataToLocalStorage(state) {
 function fetchDataFromLocalStorage() {
   try {
     const serializedState = localStorage.getItem("state");
-    return serializedState ? JSON.parse(serializedState) : undefined;
+    return serializedState ? JSON.parse(serializedState) : {};
   } catch (err) {
     console.log(err);
-    return undefined;
+    return {};
   }
 }
 
