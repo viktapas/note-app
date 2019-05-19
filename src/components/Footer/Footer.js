@@ -11,14 +11,6 @@ const Footer = () => {
           target="_blank"
         >
           Vikas Kumar
-        </a>{" "}
-        for{" "}
-        <a
-          href="https://automate.io/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          automate.io
         </a>
       </p>
     </div>

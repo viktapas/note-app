@@ -24,12 +24,12 @@ const App = () => {
         </div>
         <div className={styles.Body}>
           {bgFallback}
-          <Notes notes={state.notes} showDrawer={showDrawer} />
+          <Notes showDrawer={showDrawer} />
           <Editor note={activeNote} />
         </div>
-      </div>
-      <div className={styles.Footer__container}>
-        <Footer />
+        <div className={styles.Footer__container}>
+          <Footer />
+        </div>
       </div>
     </div>
   );

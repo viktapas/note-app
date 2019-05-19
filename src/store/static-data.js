@@ -13,7 +13,7 @@ export const generateNewNote = (randomTime? = false) => {
 export const getNotes = count => {
   let notes = {};
   for (let i = 0; i < count; i++) {
-    const newNote = generateNewNote();
+    const newNote = generateNewNote(true);
     const noteId = newNote.note_id;
     notes[noteId] = newNote;
   }

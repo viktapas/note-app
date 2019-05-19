@@ -6,6 +6,7 @@ import {
   deleteNote,
   setActiveNoteId
 } from "../../store/actions";
+import SearchNotes from "../SearchNotes/SearchNotes";
 
 import * as styles from "./Toolbar.module.css";
 
@@ -22,11 +23,9 @@ class Toolbar extends Component {
         <button className={styles.Button} onClick={this.handleCreateNote}>
           New
         </button>
-        <input
-          className={styles.Button}
-          type="search"
-          placeholder="Search notes..."
-        />
+        <div className={styles.Search__container}>
+          <SearchNotes />
+        </div>
       </div>
     );
   }

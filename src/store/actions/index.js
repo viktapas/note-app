@@ -3,7 +3,8 @@ import {
   UPDATE_NOTE,
   NEW_NOTE,
   DELETE_NOTE,
-  TOGGLE_NOTES_DRAWER
+  TOGGLE_NOTES_DRAWER,
+  SEARCH_NOTES
 } from "../action-types";
 
 export const setActiveNoteId = id => ({
@@ -28,4 +29,9 @@ export const deleteNote = id => ({
 
 export const toggleNotesDrawer = () => ({
   type: TOGGLE_NOTES_DRAWER
+});
+
+export const searchNotes = (notes, query) => ({
+  type: SEARCH_NOTES,
+  payload: { notes, query }
 });

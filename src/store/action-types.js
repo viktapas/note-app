@@ -3,3 +3,4 @@ export const UPDATE_NOTE = "UPDATE_NOTE";
 export const NEW_NOTE = "NEW_NOTE";
 export const DELETE_NOTE = "DELETE_NOTE";
 export const TOGGLE_NOTES_DRAWER = "TOGGLE_NOTES_DRAWER";
+export const SEARCH_NOTES = "SEARCH_NOTES";

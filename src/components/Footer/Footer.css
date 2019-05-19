@@ -1,5 +1,6 @@
 .Footer {
-  opacity: 0.5;
+  opacity: 0.75;
+  width: 100%;
 }
 .Footer:hover {
   opacity: 1;
