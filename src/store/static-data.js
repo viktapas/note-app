@@ -1,12 +1,12 @@
 import shortid from "shortid";
 import faker from "faker";
 
-export const generateNewNote = () => {
+export const generateNewNote = (randomTime? = false) => {
   return {
     note_id: shortid.generate(),
     title: "New Note",
     text: faker.lorem.paragraph(),
-    lastUpdate: faker.date.recent().toJSON()
+    lastUpdate: randomTime ? faker.date.recent().toJSON() : new Date().toJSON()
   };
 };
 
