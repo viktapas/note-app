@@ -2,6 +2,8 @@ import React from "react";
 import Notes from "./containers/Notes/Notes";
 import Editor from "./containers/Editor/Editor";
 import Toolbar from "./containers/Toolbar/Toolbar";
+import Footer from "./components/Footer/Footer";
+
 import { toggleNotesDrawer } from "./store/actions";
 import store from "./store";
 
@@ -25,6 +27,9 @@ const App = () => {
           <Notes notes={state.notes} showDrawer={showDrawer} />
           <Editor note={activeNote} />
         </div>
+      </div>
+      <div className={styles.Footer__container}>
+        <Footer />
       </div>
     </div>
   );

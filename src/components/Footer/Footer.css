@@ -1,0 +1,21 @@
+.Footer {
+  opacity: 0.5;
+}
+.Footer:hover {
+  opacity: 1;
+}
+
+.Footer p {
+  color: rgba(0, 0, 0, 0.5);
+}
+.Footer * {
+  font-size: 1.4rem;
+}
+
+.Footer a {
+  color: #458dd8;
+  text-decoration: none;
+}
+.Footer a:hover {
+  text-decoration: underline;
+}

@@ -21,6 +21,13 @@
   display: flex;
 }
 
+.Footer__container {
+  position: absolute;
+  right: 3rem;
+  text-align: right;
+  bottom: 2rem;
+}
+
 @media (max-width: 460px) {
   .App .Container {
     height: 100vh;
